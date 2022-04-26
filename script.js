@@ -1,5 +1,11 @@
 $(document).ready(() => {
-    $('#comment').keyup(function () { //Lorsqu'une touche est déclenchée sur le clavier//
-        $('#commentValue').html($(this).val()) //Retourne la valeur du contenu html de #comment dans le contenu de #commentValue//
-    })
-});
+    $(document).ready(() => {
+        let form = $('#form')
+
+        form.on('keyup', '.element', function () {
+            $('#elementValue').html($(this).val())
+        })
+
+        form.prepend('<input type="text" id="lastname" name="lastname" class="element" value="" />')
+        form.prepend('<label for="lastname">Lastname :</label>')
+    });
