@@ -1,6 +1,5 @@
 $(document).ready(() => {
-   $('#introduction').remove(); //Suppression d'un élément//
-    let list = $('#goals');
-   list.prepend("<li>Objectif 0</li>"); //Ajoute un élément en début de liste goals//
-   list.append("<li>Objectif 5</li>"); //Ajoute un élément en fin de liste goals//
+    $('#comment').keyup(function () { //Lorsqu'une touche est déclenchée sur le clavier//
+        $('#commentValue').html($(this).val()) //Retourne la valeur du contenu html de #comment dans le contenu de #commentValue//
+    })
 });
